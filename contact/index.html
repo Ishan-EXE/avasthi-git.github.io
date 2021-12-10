@@ -1,0 +1,105 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/avasthi-git/avasthi-git.github.io@forms/contact/form.css" >
+
+<audio autoplay>
+  <source src="media/Forever-[Eminem_Verse].mp3" type="audio/mpeg">
+</audio>
+
+<div id="form-main">
+  <div id="form-div">
+    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" class="montform" id="reused_form" enctype="multipart/form-data" >
+      <p class="name">
+      	<input name="name" type="text" class="feedback-input" required placeholder="Name" id="name" />
+      </p>
+      <p class="email">
+        <input name="email" type="email" required  class="feedback-input" id="email" placeholder="Email" />
+      </p>
+      <p class="text">
+        <textarea name="message" class="feedback-input" id="comment" placeholder="Message"></textarea>
+      </p>
+            <p class="file">
+        <input name="file" type="file" id="file" class="feedback-input">
+      </p>
+	    <div data-netlify-recaptcha="true"> <p> </p> </div>
+            <div class="submit">
+        <button type="submit" class="button-blue">SUBMIT</button>
+        <div class="ease"></div>
+      </div>
+    </form>
+          <div id="error_message" style="width:100%; height:100%; display:none; ">
+                <h4>Error</h4>
+                Sorry there was an error sending your form.
+          </div>
+          <div id="success_message" style="width:100%; height:100%; display:none; ">
+          <h2>Success! Your Message was Sent Successfully.</h2>
+          </div>
+    </div>
+</div>
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/avasthi-git/avasthi-git.github.io@forms/contact/form.css" > -->
+<script>
+$(function()
+{
+    function after_form_submitted(data)
+    {
+        if(data.result == 'success')
+        {
+            $('form#reused_form').hide();
+            $('#success_message').show();
+            $('#error_message').hide();
+        }
+        else
+        {
+            $('#error_message').append('<ul></ul>');
+
+            jQuery.each(data.errors,function(key,val)
+            {
+                $('#error_message ul').append('<li>'+key+':'+val+'</li>');
+            });
+            $('#success_message').hide();
+            $('#error_message').show();
+
+            //reverse the response on the button
+            $('button[type="button"]', $form).each(function()
+            {
+                $btn = $(this);
+                label = $btn.prop('orig_label');
+                if(label)
+                {
+                    $btn.prop('type','submit' );
+                    $btn.text(label);
+                    $btn.prop('orig_label','');
+                }
+            });
+
+        }//else
+    }
+
+	$('#reused_form').submit(function(e)
+      {
+        e.preventDefault();
+
+        $form = $(this);
+        //show some response on the button
+        $('button[type="submit"]', $form).each(function()
+        {
+            $btn = $(this);
+            $btn.prop('type','button' );
+            $btn.prop('orig_label',$btn.text());
+            $btn.text('Sending ...');
+        });
+
+
+                    var formdata = new FormData(this);
+            $.ajax({
+                type: "POST",
+                url: 'handler.php',
+                data: formdata,
+                success: after_form_submitted,
+                dataType: 'json' ,
+                processData: false,
+                contentType: false,
+                cache: false
+            });
+
+      });
+});
+</script>

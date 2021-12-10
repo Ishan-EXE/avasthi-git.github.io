@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en"> 
+<head> 
+
+<script async src="https://arc.io/widget.min.js#AyLjV5gi"></script>
+<script src="https://cdn.jsdelivr.net/gh/avasthi-git/avasthi-git.github.io@main/contact-form.js" id="contactform" form_worker_url="https://form.dragonmirror.workers.dev/"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+
+<title>Ishan Avasthi</title>
+
+
+<script language=JavaScript>
+  //Disable right mouse click Script
+  
+  var message="Sorry, Right Click is not allowed!";
+  
+  function clickIE4(){
+  if (event.button==2){
+  alert(message);
+  return false;
+   }
+  }
+  
+  function clickNS4(e){
+  if (document.layers||document.getElementById&&!document.all){
+  if (e.which==2||e.which==3){
+  alert(message);
+  return false;
+  }
+  }
+  }
+  
+  if (document.layers){
+  document.captureEvents(Event.MOUSEDOWN);
+  document.onmousedown=clickNS4;
+  }
+  else if (document.all&&!document.getElementById){
+  document.onmousedown=clickIE4;
+  }
+  
+  document.oncontextmenu=new Function("alert(message);return false")
+  
+  </script>
+  
+  <script>
+  shortcut = {
+      all_shortcuts: {},
+        add: function (e, t, n) {
+          var r = {
+            type: "keydown",
+            propagate: !1,
+            disable_in_input: !1,
+            target: document,
+            keycode: !1
+          };
+          if (n) for (var i in r) "undefined" == typeof n[i] && (n[i] = r[i]);
+          else n = r;
+          r = n.target, "string" == typeof n.target && (r = document.getElementById(n.target)), e = e.toLowerCase(), i = function (r) {
+            r = r || window.event;
+            if (n.disable_in_input) {
+              var i;
+              r.target ? i = r.target : r.srcElement && (i = r.srcElement), 3 == i.nodeType && (i = i.parentNode);
+              if ("INPUT" == i.tagName || "TEXTAREA" == i.tagName) return
+            }
+            r.keyCode ? code = r.keyCode : r.which && (code = r.which), i = String.fromCharCode(code).toLowerCase(), 188 == code && (i = ","), 190 == code && (i = ".");
+            var s = e.split("+"),
+              o = 0,
+              u = {
+                "`": "~",
+                1: "!",
+                2: "@",
+                3: "#",
+                4: "$",
+                5: "%",
+                6: "^",
+                7: "&",
+                8: "*",
+                9: "(",
+                0: ")",
+                "-": "_",
+                "=": "+",
+                ";": ":",
+                "'": '"',
+                ",": "<",
+                ".": ">",
+                "/": "?",
+                "\\": "|"
+              }, f = {
+                esc: 27,
+                escape: 27,
+                tab: 9,
+                space: 32,
+                "return": 13,
+                enter: 13,
+                backspace: 8,
+                scrolllock: 145,
+                scroll_lock: 145,
+                scroll: 145,
+                capslock: 20,
+                caps_lock: 20,
+                caps: 20,
+                numlock: 144,
+                num_lock: 144,
+                num: 144,
+                pause: 19,
+                "break": 19,
+                insert: 45,
+                home: 36,
+                "delete": 46,
+                end: 35,
+                pageup: 33,
+                page_up: 33,
+                pu: 33,
+                pagedown: 34,
+                page_down: 34,
+                pd: 34,
+                left: 37,
+                up: 38,
+                right: 39,
+                down: 40,
+                f1: 112,
+                f2: 113,
+                f3: 114,
+                f4: 115,
+                f5: 116,
+                f6: 117,
+                f7: 118,
+                f8: 119,
+                f9: 120,
+                f10: 121,
+                f11: 122,
+                f12: 123
+              }, l = !1,
+              c = !1,
+              h = !1,
+              p = !1,
+              d = !1,
+              v = !1,
+              m = !1,
+              y = !1;
+            r.ctrlKey && (p = !0), r.shiftKey && (c = !0), r.altKey && (v = !0), r.metaKey && (y = !0);
+            for (var b = 0; k = s[b], b < s.length; b++) "ctrl" == k || "control" == k ? (o++, h = !0) : "shift" == k ? (o++, l = !0) : "alt" == k ? (o++, d = !0) : "meta" == k ? (o++, m = !0) : 1 < k.length ? f[k] == code && o++ : n.keycode ? n.keycode == code && o++ : i == k ? o++ : u[i] && r.shiftKey && (i = u[i], i == k && o++);
+            if (o == s.length && p == h && c == l && v == d && y == m && (t(r), !n.propagate)) return r.cancelBubble = !0, r.returnValue = !1, r.stopPropagation && (r.stopPropagation(), r.preventDefault()), !1
+          }, this.all_shortcuts[e] = {
+            callback: i,
+            target: r,
+            event: n.type
+          }, r.addEventListener ? r.addEventListener(n.type, i, !1) : r.attachEvent ? r.attachEvent("on" + n.type, i) : r["on" + n.type] = i
+        },
+        remove: function (e) {
+          var e = e.toLowerCase(),
+            t = this.all_shortcuts[e];
+          delete this.all_shortcuts[e];
+          if (t) {
+            var e = t.event,
+              n = t.target,
+              t = t.callback;
+            n.detachEvent ? n.detachEvent("on" + e, t) : n.removeEventListener ? n.removeEventListener(e, t, !1) : n["on" + e] = !1
+          }
+        }
+      },
+       shortcut.add("Ctrl+U",function(){
+       alert('Sorry\nNo [CTRL+U] is allowed. Be creative!')
+      }),
+       shortcut.add("Meta+Alt+U",function(){
+       alert('Sorry\nNo [Command+Option+U] is allowed. Be creative!')
+      }),
+      shortcut.add("Ctrl+C",function(){
+       alert('Sorry\nYou cannot copy content using [CTRL+C] from my website.')
+      }),
+      shortcut.add("Meta+C",function(){
+       alert('Sorry\nYou cannot copy content using [Command+C] from my website.')
+      });
+  </script>
+
+ 
+<link href="https://img.icons8.com/cotton/150/000000/administrator-male.png" rel="icon" type="image/x-icon">
+<link href="https://cdn.jsdelivr.net/gh/viperadnan-git/viperadnan-git.github.io@2.0.0/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/viperadnan-git/viperadnan-git.github.io@2.0.0/cover.css" rel="stylesheet">
+
+ 
+
+
+
+ 
+ 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> 
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/gh/viperadnan-git/viperadnan-git.github.io@2.0.0/jquery.cookie.js"></script>
+<style>.bd-placeholder-img{font-size: 1.125rem; text-anchor: middle; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;}@media (min-width: 768px){.bd-placeholder-img-lg{font-size: 3.5rem;}}</style>
+
+ 
+</head> 
+  
+  
+  
+  
+  
+<body class="text-center"> <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column"> <header class="masthead mb-auto"> <div class="inner"> <a onclick="if ($('a, p, h1, h3, h5, h6, caption').hasClass('text-dark')){dark();}else{light();}" class="text-decoration-none"><h3 class="masthead-brand">&lt;&sol;&gt; ishan.exe</h3></a> <nav class="nav nav-masthead justify-content-center"> <a class="nav-link" onclick="$('#home').show();$('#resources, #contact').hide();$.cookie('page', '#home',{expires:1});">Home</a> <a class="nav-link" onclick="$('#resources').show();$('#home, #contact').hide();$.cookie('page', '#resources',{expires:1});">Resources</a> <a class="nav-link" onclick="$('#contact').show();$('#home, #resources').hide();$.cookie('page', '#contact',{expires:1});">Contact</a> </nav> </div></header>
+<main role="main" class="inner cover"> <div id="home" style="display:none"> <h1 class="cover-heading">Ishan Avasthi</h1> <p class="lead">Hey! I'm Ishan Avasthi from <strong>Jaipur, India</strong>. I am 16 year old. Currently studying <strong>in Class 11th and preparing for IIT-JEE ❤️ from Allen Career Institute</strong>. I would <strong>like to play real and outdoor games</strong> rather than virtual games.</p>
+<form class="lead" onsubmit="search();"> <input id="question" type="search" class="btn btn-secondary" placeholder="Google Anything..."> </form> 
+
+ 
+</div><div class="lead" id="resources" style="display:none"> <div id="resources-icons"> <hr> <h5><img style="width:24px;margin-bottom:5px;" src="https://img.icons8.com/offices/50/000000/user-male-circle.png"/> My Apps</h5> <a href="https://clone.ishan.ga"><img src="https://img.icons8.com/color/144/000000/movies-folder.png"/><div class="caption">Storage</div></a> <a href="https://1.dragonmirror.workers.dev"><img src="https://img.icons8.com/color/148/000000/cloud-storage.png"/><div class="caption">Avasthi Cloud</div></a> <a><img src="https://img.icons8.com/cotton/128/000000/add-to-loud.png"/><div class="caption disabled">Add to Cloud</div></a> <a href="https://1337x.hashhackers.com"><img src="https://img.icons8.com/dusk/144/000000/utorrent.png"/><div class="caption">1337x Proxy</div></a> <a href="https://rarbg.ishan.ga">
+<img alt="svgImg" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iMTQ0IiBoZWlnaHQ9IjE0NCIKdmlld0JveD0iMCAwIDE3MiAxNzIiCnN0eWxlPSIgZmlsbDojMDAwMDAwOyI+PGcgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJub256ZXJvIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0ibm9uZSIgc3Ryb2tlLWxpbmVjYXA9ImJ1dHQiIHN0cm9rZS1saW5lam9pbj0ibWl0ZXIiIHN0cm9rZS1taXRlcmxpbWl0PSIxMCIgc3Ryb2tlLWRhc2hhcnJheT0iIiBzdHJva2UtZGFzaG9mZnNldD0iMCIgZm9udC1mYW1pbHk9Im5vbmUiIGZvbnQtd2VpZ2h0PSJub25lIiBmb250LXNpemU9Im5vbmUiIHRleHQtYW5jaG9yPSJub25lIiBzdHlsZT0ibWl4LWJsZW5kLW1vZGU6IG5vcm1hbCI+PHBhdGggZD0iTTAsMTcydi0xNzJoMTcydjE3MnoiIGZpbGw9Im5vbmUiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+PGcgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiPjxwYXRoIGQ9Ik0xMzYuMTY2NjcsMTEzLjUwMjA4YzAsMjYuNDQ1IC0yMi4zODE1LDQ3Ljc0NzkyIC01MC4xNjY2Nyw0Ny43NDc5MmMtMjcuNzg1MTcsMCAtNTAuMTY2NjcsLTIxLjMwMjkyIC01MC4xNjY2NywtNDcuNzQ3OTJjMCwtMzIuNzA1MDggNTAuMTY2NjcsLTk5LjE2ODc1IDUwLjE2NjY3LC05OS4xNjg3NWMwLDAgNTAuMTY2NjcsNjYuNDYzNjcgNTAuMTY2NjcsOTkuMTY4NzV6IiBmaWxsPSIjOTBjYWY5Ij48L3BhdGg+PHBhdGggZD0iTTEyMS44Mjk3NSwxNDYuOTUyNWMtMC4wMTA3NSwwLjAyNTA4IC0wLjAyMTUsMC4wNDY1OCAtMC4wMzIyNSwwLjA3MTY3Yy05LjEwMTY3LDguNzc5MTcgLTIxLjc1MDgzLDE0LjIyNTgzIC0zNS43OTc1LDE0LjIyNTgzYy0yNi42NiwwIC00OC4zNzUsLTE5LjYwMDgzIC01MC4wNTkxNywtNDQuNjEyNXYtMC4zNTgzM2MtMC4wNzE2NywtMS4yMTgzMyAtMC4wNzE2NywtMi40NzI1IC0wLjA3MTY3LC0zLjY5MDgzYzAuMDUzNzUsLTIuNDQ3NDIgMC4zNzYyNSwtNS4wNzA0MiAwLjkzMTY3LC03LjgyOTU4YzMuNzI2NjcsLTE4LjUyOTQyIDE5LjE4MTU4LC0zMi45MjAwOCAzOC4wODAwOCwtMzMuMDg4NWMwLjEyMTgzLDAgMC4yNDM2NywwIDAuMzY1NSwwYzIxLjUsMCAzNC4zMjgzMywyMS41IDMwLjc0NSwyNy44NzgzM2MtMy44MzQxNywtOS41MTczMyAtMTQuMjQwMTcsLTE1LjcyMzY3IC0yNS42MjA4MywtMTIuODI4MzNjLTkuNzUwMjUsMi40Nzk2NyAtMTYuMDg1NTgsMTEuMjE5NDIgLTE1Ljg2NywyMS4yODE0MmMwLjIyMjE3LDEwLjI0MTE3IDcuMjg4NSwxNy42MTIwOCAxNy41MTg5MiwyMC42NDcxN2MyNS41MjA1LDcuNTI4NTggNDAuMzI2ODMsMTEuMTExOTIgMzkuODA3MjUsMTguMzAzNjd6IiBmaWxsPSIjNzg5MDljIj48L3BhdGg+PHBhdGggZD0iTTg2LDE1NC4wODMzM2MtMjMuNzEwOTIsMCAtNDMsLTE4Ljg0ODMzIC00MywtNDIuMDE0NThjMCwtMjcuMTkwMzMgMzguNDc3ODMsLTc5LjcyMiA0MC4xMTU0MiwtODEuOTQzNjdsMi44ODQ1OCwtMy45MTY1OGwyLjg4NDU4LDMuOTE2NThjMS42Mzc1OCwyLjIyMTY3IDQwLjExNTQyLDU0Ljc1NjkyIDQwLjExNTQyLDgxLjk0MzY3YzAsMjMuMTY2MjUgLTE5LjI4OTA4LDQyLjAxNDU4IC00Myw0Mi4wMTQ1OHpNODYsMzguNDIwNWMtOC45Nzk4MywxMi44MTA0MiAtMzUuODMzMzMsNTIuODU0MTcgLTM1LjgzMzMzLDczLjY1MTgzYzAsMTkuMjEzODMgMTYuMDc0ODMsMzQuODQ0MzMgMzUuODMzMzMsMzQuODQ0MzNjMTkuNzU4NSwwIDM1LjgzMzMzLC0xNS42MzA1IDM1LjgzMzMzLC0zNC44NDc5MmMwLC0yMC44MDQ4MyAtMjYuODQ5OTIsLTYwLjg0MTQyIC0zNS44MzMzMywtNzMuNjQ4MjV6IiBmaWxsPSIjYmJkZWZiIj48L3BhdGg+PC9nPjxnIGZpbGw9IiNlY2YwZjEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIj48cGF0aCBkPSJNNzkuODk1LDEwOC45NXYxNy4yMmMxLjAyNjY3LDAuMjIgMi4wMSwwLjQ1MzMzIDIuOTUsMC43YzAuOTMzMzMsMC4yNDY2NyAxLjg0NjY3LDAuNTUgMi43NCwwLjkxdjB2MS45NGgtMTcuNjJ2LTEuOTRjMC45ODY2NywtMC40NDY2NyAxLjkyNjY3LC0wLjc4MzMzIDIuODIsLTEuMDFjMC44OTMzMywtMC4yMiAxLjc4NjY3LC0wLjQyIDIuNjgsLTAuNnYwdi0zOS43M2MtMS4xNiwtMC4yMjY2NyAtMi4xODY2NywtMC40ODMzMyAtMy4wOCwtMC43N2MtMC44OTMzMywtMC4yOTMzMyAtMS43LC0wLjU5NjY3IC0yLjQyLC0wLjkxdjB2LTEuOTRoNS45YzEuNzg2NjcsMCAzLjc0LC0wLjA5IDUuODYsLTAuMjdjMi4xMiwtMC4xOCA0LjE4NjY3LC0wLjI3IDYuMiwtMC4yN3YwYzIuMTg2NjcsMCA0LjIzLDAuMjQ2NjcgNi4xMywwLjc0YzEuOSwwLjQ5MzMzIDMuNTQsMS4yNzY2NyA0LjkyLDIuMzVjMS4zODY2NywxLjA2NjY3IDIuNDcsMi40MjY2NyAzLjI1LDQuMDhjMC43ODY2NywxLjY1MzMzIDEuMTgsMy42NDMzMyAxLjE4LDUuOTd2MGMwLDMuMjYgLTAuODYsNS45NiAtMi41OCw4LjFjLTEuNzIsMi4xNDY2NyAtNC4wNTMzMywzLjY5IC03LDQuNjN2MGMxLjkyLDMuMDMzMzMgMy45Myw2LjA0NjY3IDYuMDMsOS4wNGMyLjA5MzMzLDIuOTkzMzMgNC4yOCw1Ljk2MzMzIDYuNTYsOC45MXYwbDMuNjIsMS45NXYxLjY3aC04LjExbC0yLjU0LC0xLjg4Yy0xLjI1MzMzLC0xLjU2IC0yLjM5MzMzLC0zLjA5IC0zLjQyLC00LjU5Yy0xLjAyNjY3LC0xLjQ5MzMzIC0xLjk4NjY3LC0zLjAxIC0yLjg4LC00LjU1Yy0wLjg5MzMzLC0xLjU0IC0xLjczLC0zLjEwMzMzIC0yLjUxLC00LjY5Yy0wLjc4NjY3LC0xLjU4NjY3IC0xLjU4LC0zLjI3MzMzIC0yLjM4LC01LjA2djB6TTg0LjQ1NSw4NS43N3YwYy0xLjA3MzMzLDAgLTEuOTU2NjcsMC4wMiAtMi42NSwwLjA2Yy0wLjY5MzMzLDAuMDQ2NjcgLTEuMzMsMC4xMzY2NyAtMS45MSwwLjI3djB2MjAuMDRoNC44MmMzLjA4NjY3LDAgNS41MzMzMywtMC45ODMzMyA3LjM0LC0yLjk1YzEuODA2NjcsLTEuOTY2NjcgMi43MSwtNC41NTY2NyAyLjcxLC03Ljc3djBjMCwtMy4zMDY2NyAtMC45NiwtNS43NDMzMyAtMi44OCwtNy4zMWMtMS45MiwtMS41NiAtNC4zOTY2NywtMi4zNCAtNy40MywtMi4zNHoiPjwvcGF0aD48L2c+PHBhdGggZD0iTTU3Ljk2NSwxMzkuNzJ2LTY3LjQ0aDYwLjA3djY3LjQ0eiIgZmlsbD0iI2ZmMDAwMCIgc3Ryb2tlPSIjNTBlM2MyIiBzdHJva2Utd2lkdGg9IjMiIG9wYWNpdHk9IjAiPjwvcGF0aD48L2c+PC9zdmc+"/><div class="caption">Rarbg Proxy</div></a> 
+<a href="https://chillingmusic.cf"><img src="https://img.icons8.com/color/144/000000/musical--v1.png"/><div class="caption">Chilling Music</div></a> <a href="https://booster.arnid.ga"><img src="https://img.icons8.com/fluent/150/000000/resume-website.png"/><div class="caption">Proxy Builder</div></a> <hr> <h5><img style="width:24px;margin-bottom:5px;" src="https://img.icons8.com/fluent/48/000000/user-male-circle.png"/> Other Apps</h5> <a href="https://carbon.now.sh"><img src="https://img.icons8.com/color/148/000000/carbon.png"/><div class="caption">Carbonizer</div></a> <a href="https://aws.rapidleech.gq"><img src="https://img.icons8.com/color/148/000000/fast-download.png"/><div class="caption">RapidLeech</div></a> <a href="https://convert-video-online.com/"><img src="https://img.icons8.com/color/148/000000/video-card.png"/><div class="caption">Video Converter</div></a> <a href="https://da.gd"><img src="https://img.icons8.com/color/148/000000/shorten-urls.png"/><div class="caption">URL Shortener</div></a> <a href="https://www.tubeoffline.com/download-OnLine-videos.php"><img src="https://img.icons8.com/color/148/000000/grab.png"/><div class="caption">Video Grabber</div></a> <a href="https://colab.research.google.com/github/biplobsd/OneClickRun/blob/master/OneClickRun.ipynb"><img src="https://img.icons8.com/dusk/148/000000/processor.png"/><div class="caption">OneClickRun</div></a> <a href="https://td.hackgence.com/"><img src="https://img.icons8.com/color/148/000000/network-drive.png"/><div class="caption">Create TeamDrive</div></a> <hr> </div></div>
+
+
+<!-- Below Is Contact Tab Icons -->
+<div class="lead" id="contact" style="display:none"> 
+<div id="contact-icons"> 
+
+
+<a href="https://facebook.com/heyavasthi" target="_blank">
+ <img src="https://img.icons8.com/color/148/000000/facebook-new.png"/>
+  <div class="caption">Facebook</div></a> 
+
+
+<a href="https://instagram.com/heyavasthi" target="_blank">
+ <img src="https://img.icons8.com/color/150/000000/instagram-new--v2.png"/>
+  <div class="caption">Instagram</div></a> 
+
+<a href="https://twitter.com/heyavasthi" target="_blank">
+ <img src="https://img.icons8.com/color/148/000000/twitter-circled--v1.png"/>
+  <div class="caption">Twitter</div></a> 
+  
+  
+<a href="https://avasthi.cf/telegram-contact" target="_blank">
+ <img src="https://img.icons8.com/color/148/000000/telegram-app.png"/>
+  <div class="caption">Telegram</div></a> 
+    
+    
+<a href="https://github.com/avasthi-git" target="_blank">
+ <img src="https://img.icons8.com/fluent/148/000000/github.png"/>
+  <div class="caption">GitHub</div></a> 
+      
+
+<a href="https://www.informatique-mania.com/wp-content/uploads/2021/07/WhatsApp-en-la-basura.jpg" target="_blank">
+ <img src="https://img.icons8.com/color/148/000000/whatsapp.png"/>
+  <div class="caption disabled">WhatsApp</div></a>
+
+
+<a href="https://www.linkedin.com/in/heyavasthi" target="_blank">
+ <img src="https://img.icons8.com/color/148/000000/linkedin-circled--v1.png"/>
+  <div class="caption">Linkedin</div></a> 
+
+
+<a href="https://heyavasthi.medium.com" target="_blank">
+  <img src="https://img.icons8.com/fluency/148/000000/medium-logo.png"/>
+  <div class="caption">Medium</div></a> 
+  
+  
+  <a href="https://telegram.me/IshanUpdates" target="_blank">
+    <img src="https://img.icons8.com/office/148/000000/commercial.png"/>
+    <div class="caption">Telegram Channel</div></a>
+    
+    
+    <a href="#"><img src="https://img.icons8.com/color/148/000000/youtube-play.png"/>
+      <div class="caption disabled">YouTube</div></a> 
+    
+    
+    <a href="https://www.reddit.com/user/heyavasthi" target="_blank">
+      <img src="https://img.icons8.com/bubbles/148/000000/reddit.png"/>
+      <div class="caption">Reddit</div></a> 
+    
+    
+    <a href="https://www.quora.com/profile/heyavasthi" target="_blank">
+      <img src="https://img.icons8.com/doodle/148/000000/quora--v1.png"/>
+      <div class="caption">Quora</div></a> 
+    
+    
+    <a href="mailto:heyavasthi@gmail.com?cc=ishan@hi2.in&subject=From Portfolio%3A" target="_blank">
+      <img src="https://img.icons8.com/color/148/000000/gmail.png"/>
+      <div class="caption">E-Mail</div></a> 
+    
+    
+    
+    <hr> 
+    
+    
+    
+    <a href="https://www.google.com/search?q=heyavasthi" target="_blank">
+      <img style="width:24px;margin-bottom:4px;" src="https://img.icons8.com/fluent/150/000000/google-logo.png"/> Google Me</a> 
+  
+  
+
+    <hr>
+
+
+    <!-- <form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+ 
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form> -->
+
+  </div>
+</div>
+</main> <footer class="mastfoot mt-auto"> <div class="inner"> <p class="footer"> Copyright &copy; 2021 — All Rights Reserved<br><a href="https://avasthi-git.github.io">Ishan Avasthi</a> </p></div></footer></div><script type="text/javascript">var page=$.cookie('page'); if (page){$(page).show();}else{$('#home').show();}if ($.cookie('mode')==1){light();}function light(){$('body').css({'background-color':'#fff', 'text-shadow':'none', 'box-shadow':'none'}); $('a, p, h1, h3, h5, h6, caption').addClass('text-dark border-light'); $('#question').removeClass('btn-secondary'); $('#question').addClass('btn-dark'); $.cookie('mode', 1);}function dark(){$('body').css({'background-color':'', 'text-shadow':'', 'box-shadow':''}); $('a, p, h1, h3, h5, h6, caption').removeClass('text-dark border-light'); $('#question').removeClass('btn-dark'); $('#question').addClass('btn-secondary'); $.removeCookie('mode');}function search(){window.open('https://www.google.com/search?output=search&q=' + document.getElementById("question").value)}</script>
+
+ 
+</body>
+
+</html>
+<!--form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Your Role: <select name="role[]" multiple>
+      <option value="leader">Family/Relative</option>
+      <option value="follower">Professional</option>
+    </select></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+
+

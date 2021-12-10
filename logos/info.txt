@@ -1,0 +1,14 @@
+
+Hope you enjoy your new logo, here are the people that
+made your beautiful logo happen :)
+font name: OstrichSans-Bold
+font link: https://www.fontsquirrel.com/fonts/ostrich-sans
+font author: Tyler Finck
+font author site: https://www.tylerfinck.com
+Slogan Font: Renner-Thin.otf
+
+icon designer: P.J. Onori
+icon designer link: /somerandomdude
+        
+{"bg-gradient-0":"#D6413F","bg-gradient-1":"#4285D3","icon":"#ffffff","font":"#ffffff","slogan":"#ffffff"}
+      
