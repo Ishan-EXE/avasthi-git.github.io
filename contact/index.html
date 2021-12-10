@@ -1,12 +1,48 @@
+<!-- Read the Formbutton docs at formspree.io/formbutton/docs. See more examples at codepen.io/formspree -->
+<script src="https://formspree.io/js/formbutton-v1.min.js" defer></script>
+<script>
+  /* paste this line in verbatim */
+  window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+  /* customize formbutton below*/     
+  formbutton("create", {
+    action: "https://formspree.io/f/xgedeadw",
+    title: "How can we help?",
+    fields: [
+      { 
+        type: "email", 
+        label: "Email:", 
+        name: "email",
+        required: true,
+        placeholder: "your@email.com"
+      },
+      {
+        type: "textarea",
+        label: "Message:",
+        name: "message",
+        placeholder: "What's on your mind?",
+      },
+      { type: "submit" }      
+    ],
+    styles: {
+      title: {
+        backgroundColor: "gray"
+      },
+      button: {
+        backgroundColor: "gray"
+      }
+    }
+  });
+</script>
+
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/avasthi-git/avasthi-git.github.io@forms/contact/form.css" >
 
 <audio autoplay>
-  <source src="media/Forever-[Eminem_Verse].mp3" type="audio/mpeg">
+  <source src="https://cdn.jsdelivr.net/gh/Ishan-EXE/avasthi-git.github.io@main/contact/Forever%20CD%201%20TRACK%201%20(320).mp3" type="audio/mpeg">
 </audio>
 
 <div id="form-main">
   <div id="form-div">
-    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" class="montform" id="reused_form" enctype="multipart/form-data" >
+    <form action="https://formspree.io/f/xgedeadw" method="POST" enctype="multipart/form-data">
       <p class="name">
       	<input name="name" type="text" class="feedback-input" required placeholder="Name" id="name" />
       </p>
